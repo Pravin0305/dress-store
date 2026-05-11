@@ -1,0 +1,114 @@
+.gallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.main {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-card);
+  background: var(--color-line);
+  overflow: hidden;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.main:hover .mainImg {
+  transform: scale(1.04);
+}
+
+.counter {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: var(--color-ink-70);
+  color: var(--color-on-dark);
+  font-size: var(--text-2xs);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: var(--color-glass-strong);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  z-index: var(--z-base);
+}
+
+.nav:hover { background: var(--color-white); }
+.prev { left: 0.6rem; }
+.next { right: 0.6rem; }
+
+.thumbs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.thumb {
+  flex: 0 0 64px;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-line);
+  cursor: pointer;
+  border: 2px solid transparent;
+  scroll-snap-align: start;
+  padding: 0;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+  opacity: 0.7;
+}
+
+.thumb:hover { opacity: 1; }
+
+.thumbSelected {
+  opacity: 1;
+  border-color: var(--color-brand);
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: 72px 1fr;
+    gap: 1rem;
+    position: sticky;
+    top: 80px;
+    align-self: start;
+  }
+  .thumbs {
+    flex-direction: column;
+    grid-row: 1;
+    grid-column: 1;
+    max-height: 540px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .thumb { flex: 0 0 88px; }
+  .main { grid-row: 1; grid-column: 2; }
+}

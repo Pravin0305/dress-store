@@ -1,0 +1,84 @@
+.summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+  position: sticky;
+  top: 80px;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: var(--text-md);
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.row .label { color: var(--color-muted); }
+
+.divider {
+  height: 1px;
+  background: var(--color-line);
+}
+
+.totalRow {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+}
+
+.free {
+  color: var(--color-success);
+  font-weight: var(--font-semibold);
+}
+
+.shippingBanner {
+  background: var(--color-accent-soft);
+  color: var(--color-sale-text);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.85rem;
+  display: grid;
+  gap: 0.4rem;
+  font-size: var(--text-sm);
+}
+
+.shippingFree {
+  background: color-mix(in srgb, var(--color-success) 10%, transparent);
+  color: var(--color-success);
+}
+
+.progressTrack {
+  height: 6px;
+  background: var(--color-ink-8);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+.progressFillFull { background: var(--color-success); }
+
+.note {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-align: center;
+  margin: 0;
+}

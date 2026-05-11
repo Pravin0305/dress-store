@@ -1,0 +1,140 @@
+.section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.summary {
+  display: grid;
+  gap: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 1.25rem;
+}
+
+.summaryTop {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.bigNumber {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: var(--font-semibold);
+  line-height: 1;
+  color: var(--color-brand);
+}
+
+.smallMax {
+  color: var(--color-muted);
+  font-size: var(--text-md);
+}
+
+.totalLabel {
+  color: var(--color-muted);
+  font-size: var(--text-base);
+  margin: 0.4rem 0 0;
+}
+
+.bars {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 32px 1fr 36px;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.barTrack {
+  height: 6px;
+  background: var(--color-line);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.review {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 1.1rem 1.25rem;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.author {
+  font-weight: var(--font-semibold);
+  color: var(--color-ink);
+}
+
+.date {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-success);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+}
+
+.size {
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.title {
+  margin: 0.65rem 0 0.3rem;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+}
+
+.body {
+  margin: 0;
+  color: var(--color-ink);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-md);
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-card);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .summary { grid-template-columns: 220px 1fr; align-items: center; gap: 2rem; padding: 1.75rem; }
+}

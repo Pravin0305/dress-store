@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-brand:          #111827;
+  --color-brand-soft:     #1f2937;
+  --color-brand-darker:   #0b1220;
+
+  --color-accent:         #d4a373;
+  --color-accent-soft:    #faedcd;
+  --color-accent-darker:  #c79566;
+
+  --color-ink:            #0f172a;
+  --color-ink-soft:       #334155;
+  --color-muted:          #6b7280;
+
+  --color-white:          #ffffff;
+  --color-surface:        #ffffff;
+  --color-surface-alt:    #f8f7f4;
+  --color-line:           #e5e7eb;
+
+  --color-danger:         #dc2626;
+  --color-danger-darker:  #b91c1c;
+  --color-danger-bg:      #fee2e2;
+  --color-danger-text:    #991b1b;
+  --color-success:        #16a34a;
+  --color-warning:        #f59e0b;
+  --color-info:           #10b981;
+
+  --color-ink-6:          rgb(15 23 42 / 0.06);
+  --color-ink-8:          rgb(15 23 42 / 0.08);
+  --color-ink-15:         rgb(15 23 42 / 0.15);
+  --color-ink-50:         rgb(15 23 42 / 0.50);
+  --color-ink-70:         rgb(15 23 42 / 0.70);
+
+  --color-sale-text:      #6b4f1d;
+
+  --color-on-dark:                #ffffff;
+  --color-on-dark-muted:          rgb(255 255 255 / 0.85);
+  --color-on-dark-soft:           rgb(255 255 255 / 0.65);
+  --color-on-dark-faint:          rgb(255 255 255 / 0.45);
+  --color-on-dark-ghost:          rgb(255 255 255 / 0.06);
+  --color-on-dark-line:           rgb(255 255 255 / 0.15);
+  --color-on-dark-line-faint:     rgb(255 255 255 / 0.08);
+
+  --color-glass-strong:           rgb(255 255 255 / 0.92);
+  --color-glass:                  rgb(255 255 255 / 0.9);
+  --color-glass-soft:             rgb(255 255 255 / 0.7);
+
+  --color-img-overlay-0:  rgb(0 0 0 / 0.65);
+  --color-img-overlay-1:  rgb(0 0 0 / 0.15);
+  --color-img-overlay-2:  rgb(0 0 0 / 0);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-2xs:     0.7rem;
+  --text-xs:      0.75rem;
+  --text-sm:      0.8rem;
+  --text-base:    0.85rem;
+  --text-md:      0.9rem;
+  --text-lg:      0.95rem;
+  --text-xl:      1rem;
+  --text-2xl:     1.125rem;
+  --text-3xl:     1.25rem;
+  --text-4xl:     1.4rem;
+  --text-5xl:     1.5rem;
+  --text-6xl:     1.75rem;
+  --text-7xl:     2rem;
+
+  --font-normal:    400;
+  --font-medium:    500;
+  --font-semibold:  600;
+  --font-bold:      700;
+
+  --leading-tight:    1.2;
+  --leading-snug:     1.35;
+  --leading-normal:   1.55;
+  --leading-relaxed:  1.7;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.1em;
+  --tracking-widest:  0.14em;
+
+  --radius-xs:     4px;
+  --radius-sm:     6px;
+  --radius-md:     10px;
+  --radius-lg:     12px;
+  --radius-card:   12px;
+  --radius-xl:     16px;
+  --radius-pill:   9999px;
+
+  --shadow-sm:           0 1px 2px rgb(0 0 0 / 0.05);
+  --shadow-md:           0 4px 12px rgb(0 0 0 / 0.08);
+  --shadow-lg:           0 12px 32px rgb(0 0 0 / 0.12);
+  --shadow-focus:        0 0 0 3px rgb(15 23 42 / 0.06);
+  --shadow-focus-danger: 0 0 0 3px rgb(220 38 38 / 0.12);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.45s ease;
+
+  --z-base:       1;
+  --z-sticky:     40;
+  --z-navbar:     50;
+  --z-overlay:    100;
+  --z-modal:      200;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  background-color: var(--color-surface-alt);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-semibold);
+}
+
+html { scroll-behavior: smooth; }
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.9); opacity: 0; }
+  60%  { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

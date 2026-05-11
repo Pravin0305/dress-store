@@ -1,0 +1,28 @@
+.img {
+  display: block;
+  background: linear-gradient(
+    135deg,
+    var(--color-surface-alt) 0%,
+    var(--color-line) 50%,
+    var(--color-surface-alt) 100%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 1.4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.loaded {
+  opacity: 1;
+  animation: none;
+  background: transparent;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img { animation: none; transition: none; opacity: 1; }
+}

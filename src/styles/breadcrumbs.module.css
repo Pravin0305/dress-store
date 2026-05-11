@@ -1,0 +1,29 @@
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.crumb a {
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.crumb a:hover { color: var(--color-brand); }
+
+.current {
+  color: var(--color-ink);
+  font-weight: var(--font-medium);
+}
+
+.sep {
+  color: var(--color-muted);
+  opacity: 0.6;
+}

@@ -1,0 +1,116 @@
+.page {
+  display: grid;
+  place-items: center;
+  padding-block: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.iconBubble {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-success) 18%, var(--color-surface));
+  color: var(--color-success);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-success);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  color: var(--color-brand);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--color-muted);
+  max-width: 50ch;
+  line-height: var(--leading-snug);
+}
+
+.orderId {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: var(--color-surface-alt);
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-pill);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--text-base);
+  color: var(--color-ink);
+}
+
+.orderIdLabel {
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  font-size: var(--text-2xs);
+}
+
+.facts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.fact {
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.factLabel {
+  font-size: var(--text-2xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-muted);
+  font-weight: var(--font-semibold);
+}
+
+.factValue {
+  font-size: var(--text-md);
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.cta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .card { padding: 3rem 2.5rem; }
+  .facts { grid-template-columns: 1fr 1fr; }
+}

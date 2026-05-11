@@ -1,0 +1,200 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-navbar);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-line);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  height: 64px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  font-size: var(--text-4xl);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.navLinks {
+  display: none;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  position: relative;
+  font-size: var(--text-md);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+  color: var(--color-accent);
+}
+
+.navLinks a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  justify-self: end;
+}
+
+.iconBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.iconBtn:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--color-accent);
+}
+
+.countBadge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  background: var(--color-brand);
+  color: var(--color-on-dark);
+  border-radius: var(--radius-pill);
+  font-size: 0.65rem;
+  font-weight: var(--font-bold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-surface);
+  pointer-events: none;
+}
+
+.countBadgeAccent {
+  background: var(--color-accent);
+  color: var(--color-brand);
+}
+
+.menuToggle {
+  display: inline-flex;
+}
+
+.mobileMenu {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0 1.5rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.mobileMenu a {
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: var(--text-xl);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.searchDrawer {
+  border-top: 1px solid var(--color-line);
+  background: var(--color-surface);
+  padding: 0.75rem 0 1rem;
+  animation: fadeIn 0.2s ease both;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 0.5rem 0.45rem 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.searchForm:focus-within {
+  border-color: var(--color-brand);
+  box-shadow: var(--shadow-focus);
+}
+
+.searchInput {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  padding: 0.35rem 0;
+  min-width: 0;
+}
+
+.searchInput::placeholder { color: var(--color-muted); }
+
+.searchSubmit {
+  border: 0;
+  background: var(--color-brand);
+  color: var(--color-on-dark);
+  font: inherit;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.searchSubmit:hover { background: var(--color-brand-soft); }
+
+.searchClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.searchClose:hover { background: var(--color-line); color: var(--color-ink); }
+
+@media (min-width: 768px) {
+  .navLinks { display: flex; }
+  .menuToggle { display: none; }
+  .mobileMenu { display: none; }
+}

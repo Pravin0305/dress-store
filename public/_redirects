@@ -1,0 +1,4 @@
+# Netlify single-page application fallback.
+# Every request that isn't a static file falls through to index.html so
+# react-router can handle the route on the client.
+/*    /index.html   200

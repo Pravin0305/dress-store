@@ -1,0 +1,110 @@
+.footer {
+  background-color: var(--color-brand);
+  color: var(--color-on-dark-muted);
+  margin-top: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-block: 3rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  color: var(--color-on-dark);
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  margin: 0;
+  font-size: var(--text-md);
+  color: var(--color-on-dark-soft);
+  max-width: 32ch;
+  line-height: 1.6;
+}
+
+.colTitle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-on-dark);
+  margin: 0 0 1rem;
+}
+
+.colList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.colList a {
+  color: var(--color-on-dark-soft);
+  text-decoration: none;
+  font-size: var(--text-md);
+  transition: color var(--transition-fast);
+}
+
+.colList a:hover { color: var(--color-accent); }
+
+.newsletter {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 0.85rem;
+  background: var(--color-on-dark-ghost);
+  border: 1px solid var(--color-on-dark-line);
+  border-radius: 8px;
+  color: var(--color-on-dark);
+  font-size: var(--text-md);
+  outline: none;
+}
+
+.newsletter input::placeholder { color: var(--color-on-dark-faint); }
+
+.newsletter input:focus { border-color: var(--color-accent); }
+
+.newsletter button {
+  padding: 0 1rem;
+  background: var(--color-accent);
+  color: var(--color-brand);
+  border: 0;
+  border-radius: 8px;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.newsletter button:hover { opacity: 0.9; }
+
+.bottom {
+  border-top: 1px solid var(--color-on-dark-line-faint);
+  padding-block: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-on-dark-faint);
+}
+
+@media (min-width: 640px) {
+  .grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .bottom { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 3rem; }
+}

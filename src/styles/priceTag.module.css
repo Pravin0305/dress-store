@@ -1,0 +1,39 @@
+.tag {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.current {
+  font-weight: var(--font-bold);
+  color: var(--color-ink);
+}
+
+.original {
+  color: var(--color-muted);
+  text-decoration: line-through;
+}
+
+.discount {
+  color: var(--color-danger);
+  font-weight: var(--font-semibold);
+}
+
+.sm .current   { font-size: var(--text-md); }
+.sm .original  { font-size: var(--text-xs); }
+.sm .discount  { font-size: var(--text-2xs); }
+
+.md .current   { font-size: var(--text-2xl); }
+.md .original  { font-size: var(--text-base); }
+.md .discount  { font-size: var(--text-sm); }
+
+.lg .current   { font-size: var(--text-5xl); }
+.lg .original  { font-size: var(--text-xl); }
+.lg .discount  { font-size: var(--text-md); }
+
+.stack {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
